@@ -1,0 +1,478 @@
+:root {
+    --primary-color: #ff6b6b;
+    --text-color: #848383;
+    --label-color: #555;
+    --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    --navy-blue: #001f3f;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    padding: 0.625rem 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+
+.radio-buttons {
+    display: flex;
+    gap: 0.625rem;
+}
+
+.radio-buttons label {
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 0.6rem;
+    border: none;
+    border-radius: 0.65rem;
+    color: #696868;
+    font-size: small;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.radio-buttons label.selected {
+    background-color: rgb(108, 105, 105);
+    color: #fff;
+}
+
+.radio-buttons input[type="radio"] {
+    display: none;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    right: 1.25rem;
+}
+
+.search-bar {
+    position: relative;
+    margin-left: 2rem;
+}
+
+.search-bar input {
+    padding: 0.5rem 0.5rem 0.5rem 2.8rem;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    font-size: small;
+}
+
+.search-icon {
+    position: absolute;
+    left: 0.1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+.join-button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.375rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.currency-dropdown {
+    border: none;
+    background: transparent;
+    margin-right: 4rem;
+    color: var(--text-color);
+}
+
+.pet-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-image: url('../../assets/signupBanner.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding: 1rem;
+}
+
+.pet-sign-up-form {
+    background: rgba(249, 222, 179, 0.627);
+    padding: 1.25rem;
+    border-radius: 1.4rem;
+    margin-top: 3rem;
+    margin-left: 3rem;
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    max-width: 37rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.pet-header-section {
+    width: 100%;
+    margin-top: 1.2rem;
+    margin-bottom: 1.7rem;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pet-form-header {
+    font-size: 1.3rem;
+    color: var(--navy-blue);
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-family: 'Baloo 2', cursive;
+}
+
+.pet-profile-and-images {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.pet-upload-image {
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pet-upload-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+}
+
+.pet-upload-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pet-plus-icon {
+    font-size: 2rem;
+    color: #999;
+}
+
+.pet-upload-label {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.pet-upload-image:hover .pet-upload-label {
+    opacity: 1;
+}
+
+.pet-upload-label input {
+    display: none;
+}
+
+.pet-form-group {
+    margin-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pet-Name input {
+    padding: 1rem;
+    border: none;
+    border-radius: 0.7rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: #fff;
+}
+
+.pet-Name input::placeholder {
+    color: var(--text-color);
+}
+
+.pet-Name input:first-child {
+    width: calc(50% - 0.5rem);
+}
+
+.pet-Name input:last-child {
+    width: calc(50% - 0.5rem);
+}
+
+.pet-half-width {
+    display: flex;
+    width: 100%;
+}
+
+.pet-half-width input {
+    width: calc(50% - 0.5rem);
+    padding: 1rem;
+    border: none;
+    border-radius: 0.7rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: #fff;
+    margin-right: 0.5rem;
+}
+
+.pet-half-width input::placeholder {
+    color: var(--text-color);
+}
+
+.pet-half-width input:last-child {
+    margin-right: 0;
+}
+
+.pet-birthday-weight-height {
+    display: flex;
+    width: 100%;
+}
+
+.pet-birthday-weight-height input {
+    padding: 1rem;
+    border: none;
+    padding-right: 5rem;
+    border-radius: 0.7rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.pet-birthday-weight-height input::placeholder {
+    color: var(--text-color);
+    padding-right: 5rem;
+}
+
+.pet-birthday-weight-height input:first-child {
+    width: calc(50% - 0.5rem);
+    margin-right: 0.5rem;
+}
+
+.pet-birthday-weight-height .weight-container,
+.pet-birthday-weight-height .height-container {
+    position: relative;
+    width: calc(25% - 0.25rem);
+}
+
+.pet-birthday-weight-height input:nth-child(2),
+.pet-birthday-weight-height input:last-child {
+    width: 100%;
+    margin-right: 0.5rem;
+    padding-right: 7rem;
+}
+
+.pet-birthday-weight-height input:last-child {
+    margin-right: 0;
+}
+
+.pet-birthday-weight-height .weight-container::after,
+.pet-birthday-weight-height .height-container::after {
+    content: attr(data-unit);
+    position: absolute;
+    right: 0.2em;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.7rem 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.pet-gender-breed {
+    display: flex;
+    width: 100%;
+}
+
+.pet-gender-breed input {
+    padding: 1rem;
+    border: none;
+    border-radius: 0.7rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: #fff;
+}
+
+.pet-gender-breed input::placeholder {
+    color: var(--text-color);
+}
+
+.pet-gender-breed input:first-child,
+.pet-gender-breed input:nth-child(2) {
+    width: calc(17% - 0.5rem);
+    margin-right: 0.5rem;
+}
+
+.pet-gender-breed input:nth-child(3) {
+    width: calc(35% - 0.5rem);
+    margin-right: 0.5rem;
+}
+
+.pet-gender-breed input:nth-child(4) {
+    width: calc(17% - 0.5rem);
+    margin-right: 0.5rem;
+}
+
+.pet-gender-breed input:last-child {
+    width: calc(17% - 0.2rem);
+    margin-right: 0;
+}
+
+.pet-skip-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.pet-skip-button1 {
+    padding: 0.5rem 0.5rem;
+    border: none;
+    background-color: transparent;
+    color: rgb(176, 172, 172);
+    font-size: 0.8rem;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0rem;
+}
+
+.pet-skip-button2 {
+    padding: 0.5rem 0.5rem;
+    border: none;
+    background-color: transparent;
+    color: rgb(128, 126, 126);
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0rem;
+}
+
+.pet-step-indicator-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.pet-submit-button {
+    padding: 0.625rem 1.25rem;
+    border: none;
+    background-color: white;
+    color: #504e4e;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 48%;
+    justify-content: center;
+    border-radius: 0.6rem;
+}
+
+.pet-submit-button-next {
+    border-radius: 0.6rem;
+    padding: 0.625rem 1.25rem;
+    border: none;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 48%;
+    justify-content: center;
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .pet-container {
+        padding: 0.5rem;
+    }
+
+    .pet-sign-up-form {
+        margin-top: 1.875rem;
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .pet-half-width {
+        flex-direction: column;
+    }
+
+    .pet-half-width input {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 0.625rem;
+    }
+
+    .pet-gender-breed {
+        flex-direction: column;
+    }
+
+    .pet-gender-breed input {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 0.625rem;
+    }
+
+    .pet-birthday-weight-height {
+        flex-direction: column;
+    }
+
+    .pet-birthday-weight-height input {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 0.625rem;
+    }
+
+    .pet-step-indicator-container {
+        flex-direction: column;
+    }
+
+    .pet-submit-button {
+        width: 100%;
+        margin-top: 1rem;
+    }
+}

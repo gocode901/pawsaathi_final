@@ -1,0 +1,339 @@
+:root {
+  --primary-color: #ff6b6b;
+  --text-color: #333;
+  --label-color: #555;
+  --box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  --navy-blue: #001f3f;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-image: url('../../assets/signupBanner.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.navbar {
+  width: 100%;
+  padding: 0.625rem 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+
+.radio-buttons {
+  display: flex;
+  gap: 0.625rem;
+}
+
+.radio-buttons label {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 0.6rem;
+  border: none;
+  border-radius: 0.65rem;
+  color: #696868;
+  font-size: small;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.radio-buttons label.selected {
+  background-color: rgb(108, 105, 105);
+  color: #fff;
+}
+
+.radio-buttons input[type="radio"] {
+  display: none;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: absolute;
+  right: 1.25rem;
+}
+
+.search-bar {
+  position: relative;
+  margin-left: 2rem;
+}
+
+.search-bar input {
+  padding: 0.5rem 0.5rem 0.5rem 2.8rem;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  font-size: small;
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+}
+
+.join-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.currency-dropdown {
+  border: none;
+  background: transparent;
+  margin-right: 4rem;
+  color: var(--text-color);
+}
+
+.sign-up-form {
+  background: rgba(249, 222, 179, 0.627);
+  padding: 1.25rem;
+  border-radius: 1.4rem;
+  margin-top: 3rem;
+  margin-left: 3rem;
+  box-shadow: var(--box-shadow);
+  width: 100%;
+  max-width: 37rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0.7rem;
+}
+
+.form-header {
+  color: var(--navy-blue);
+  font-size: 3rem;
+  color: rgb(2, 2, 106);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-family: 'Baloo 2', cursive;
+}
+
+.upload-image {
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  overflow: hidden; /* Ensures the image stays within the rounded container */
+  background-color: #ccc; /* Placeholder background color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container */
+}
+
+.upload-label {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.upload-label input {
+  display: none;
+}
+
+.form-group {
+  margin-bottom: 0.3rem;
+  width: 100%;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.7rem;
+  font-size: 0.9rem;
+  color: #706c6c;
+}
+
+.half-width {
+  display: flex;
+  justify-content: space-between;
+}
+
+.half-width input {
+  width: calc(50% - 0.5rem);
+}
+
+.triple-width {
+  display: flex;
+  justify-content: space-between;
+}
+
+.triple-width input {
+  width: calc(20% - 0.5rem);
+}
+
+.triple-width input:nth-child(2) {
+  width: calc(40% - 0.5rem);
+}
+
+.triple-width input:last-child {
+  width: calc(40% - 0.5rem);
+}
+
+.full-width input {
+  width: 100%;
+}
+
+.checkbox-label {
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.8rem;
+  color: var(--label-color);
+}
+
+span {
+  margin-left: 1rem;
+  color: #767575;
+}
+
+.checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.checkboxes label {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 0.6rem;
+  border: none;
+  border-radius: 0.65rem;
+  color: #696868;
+  font-size: small;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.checkboxes label.selected {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.checkboxes input {
+  display: none;
+}
+
+.submit-button {
+  padding: 0.625rem 1.25rem;
+  border: none;
+  background-color: transparent;
+  color: var(--navy-blue);
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+
+  .sign-up-form {
+    margin-top: 1.875rem;
+    width: 90%;
+  }
+
+  .half-width input,
+  .triple-width input {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .triple-width input:nth-child(2),
+  .triple-width input:last-child {
+    margin-bottom: 1rem;
+  }
+}
+
+.step-indicator-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 2.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.step-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.step-indicator .dot {
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  background-color: rgba(249, 222, 179, 0.73);
+  border: 2px solid var(--primary-color);
+}
+
+.step-indicator .dot.red {
+  background-color: red;
+  border: none;
+}
+
+.step-indicator .dot.bordered {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+}
+
+.step-indicator .dot.active {
+  background-color: var(--primary-color);
+}

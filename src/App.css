@@ -1,0 +1,23 @@
+
+
+.signup-page{
+  width: 30rem;
+  height: 20rem;
+  background-color: rgb(88, 221, 99);
+}
+
+.form-outline{
+  width: 30rem;
+  height:20rem;
+ 
+}
+input,
+.signup-button,
+.login-button{
+  margin: 5px 0px;
+}
+
+.signup-button,
+.login-button{
+  cursor: pointer;
+}

@@ -1,0 +1,11 @@
+.HeroBanner{
+    padding: 0px; 
+    margin-right: 5px;
+    height: 620px;
+    width: 100%;
+    border-radius: 25px 25px 25px 25px;
+  
+    background-image:url(../../assets/profileBanner.png);
+    background-size: cover;
+    background-repeat: no-repeat; 
+  }
