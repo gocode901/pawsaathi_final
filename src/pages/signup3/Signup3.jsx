@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faCircleDot } from "@fortawesome/free-solid-svg-icons";
+import { faCircleDot } from "@fortawesome/free-solid-svg-icons";
 import "./Signup3.css";
+import Navbar from "../../Components/Navbar/Navbar";
 
 const Signup3 = () => {
-  const [selectedPet, setSelectedPet] = useState("Dog");
-  const [selectedCurrency, setSelectedCurrency] = useState("INR");
   const [uploadedImage, setUploadedImage] = useState(null);
 
   useEffect(() => {
@@ -16,9 +15,9 @@ const Signup3 = () => {
     document.head.appendChild(link);
   }, []);
 
-  const handlePetChange = (pet) => {
-    setSelectedPet(pet);
-  };
+  // const handlePetChange = (pet) => {
+  //   setSelectedPet(pet);
+  // };
 
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
@@ -31,48 +30,7 @@ const Signup3 = () => {
 
   return (
     <div className="pet-container">
-      <nav className="navbar">
-        <div className="radio-buttons">
-          {["Dog", "Cat"].map((pet) => (
-            <label
-              key={pet}
-              className={selectedPet === pet ? "selected" : ""}
-              onClick={() => handlePetChange(pet)}
-            >
-              <input
-                type="radio"
-                name="pet"
-                value={pet}
-                checked={selectedPet === pet}
-                onChange={() => handlePetChange(pet)}
-              />
-              {pet}
-            </label>
-          ))}
-        </div>
-        <div className="nav-right">
-          <div className="search-bar">
-            <span className="search-icon">
-              <FontAwesomeIcon icon={faSearch} />
-            </span>
-            <input type="text" placeholder="Search something here!" />
-          </div>
-          <a href="#" className="join-button">
-            Join the community
-          </a>
-          <FontAwesomeIcon icon={faCircleDot} style={{ color: "#d92020" }} />
-          <select
-            className="currency-dropdown"
-            value={selectedCurrency}
-            onChange={(e) => setSelectedCurrency(e.target.value)}
-          >
-            <option value="INR">INR</option>
-            <option value="USD">$</option>
-            <option value="EUR">€</option>
-            <option value="Other">Others</option>
-          </select>
-        </div>
-      </nav>
+      <Navbar></Navbar>
       <div className="pet-sign-up-form">
         <div className="pet-header-section">
           <h2 className="pet-form-header">

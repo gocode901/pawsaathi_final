@@ -1,5 +1,5 @@
 import React from "react";
-import SignupBox from "../../Components/SignUpBox/SignupBox";
+import SignupBox from "../../Components/signup2/SignupBox";
 import "./Signup2.css";
 import Navbar from "../../Components/Navbar/Navbar";
 

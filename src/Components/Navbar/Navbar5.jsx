@@ -2,7 +2,7 @@ import "./Navbar.css";
 import { React, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faCircleDot } from "@fortawesome/free-solid-svg-icons";
-const Navbar = () => {
+const Navbar5 = () => {
   const [selectedCurrency, setSelectedCurrency] = useState("INR");
   const currencyStyle = {
     fontFamily: "Fredoka, sans-serif",
@@ -46,11 +46,7 @@ const Navbar = () => {
             </span>
             <input type="text" placeholder="Search something here!" />
           </div>
-          <a
-            href="#"
-            className="join-button mr-4"
-            style={{ fontFamily: "Fredoka, sans-serif", fontWeight: 500 }}
-          >
+          <a href="#" className="join-button">
             Join the community
           </a>
           <FontAwesomeIcon icon={faCircleDot} style={{ color: "#d92020" }} />
@@ -66,7 +62,7 @@ const Navbar = () => {
             <option value="Other">Others</option>
           </select>
         </div>
-        {/* <div className=" w-10 h-10 text-center pl-2">
+        <div className=" w-10 h-10 text-center pl-2">
           <div className="relative w-10">
             <img
               className="w-10 h-10 rounded-full absolute"
@@ -81,10 +77,10 @@ const Navbar = () => {
               />
             </div>
           </div>
-        </div> */}
+        </div>
       </nav>
     </div>
   );
 };
 
-export default Navbar;
+export default Navbar5;

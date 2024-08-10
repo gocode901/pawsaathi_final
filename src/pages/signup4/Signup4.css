@@ -1,14 +1,13 @@
 
 .Map-Banner{
-    padding: 0px; 
-    margin-right: 5px;
-    height: 620px;
-    width: 100%;
-    border-radius: 20px 20px 20px 20px;
-  
-    background-image:url(../../assets/addressBanner.png);
-    background-size: cover;
-    background-repeat: no-repeat; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-image: url('../../assets/addressBanner.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
   }
   
 .locataion-address{

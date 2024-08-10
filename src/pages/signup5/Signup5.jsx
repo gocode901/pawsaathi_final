@@ -1,14 +1,14 @@
 import React from "react";
-import "../signup5/Signup5";
-import Navbar from "../../Components/Navbar/Navbar";
-import PetInfo from "../../Components/PetInfo/PetInfo";
+import Navbar5 from "../../Components/Navbar/Navbar5";
+import PetInfo from "../../Components/signup5/PetInfo";
+import "../signup5/Signup5.css";
 
-const Profile3 = () => {
+const Signup5 = () => {
   return (
-    <div className="HeroBanner">
-      <Navbar />
+    <div className="signup5banner">
+      <Navbar5 />
       <PetInfo />
     </div>
   );
 };
-export default Profile3;
+export default Signup5;

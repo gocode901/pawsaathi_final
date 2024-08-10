@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faSearch,
-  faCircleDot,
-  faGreaterThan,
-} from "@fortawesome/free-solid-svg-icons";
+import { faGreaterThan } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import "./Signup1.css";
+import Navbar from "../../Components/Navbar/Navbar";
 
 const Signup1 = () => {
-  const [selectedPet, setSelectedPet] = useState("Dog");
   const [selectedRoles, setSelectedRoles] = useState([]);
-  const [selectedCurrency, setSelectedCurrency] = useState("INR");
   const [uploadedImage, setUploadedImage] = useState(null);
 
   const navigate = useNavigate();
@@ -34,9 +29,9 @@ const Signup1 = () => {
     );
   };
 
-  const handlePetChange = (pet) => {
-    setSelectedPet(pet);
-  };
+  // const handlePetChange = (pet) => {
+  //   setSelectedPet(pet);
+  // };
 
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
@@ -51,48 +46,7 @@ const Signup1 = () => {
 
   return (
     <div className="container">
-      <nav className="navbar">
-        <div className="radio-buttons">
-          {["Dog", "Cat"].map((pet) => (
-            <label
-              key={pet}
-              className={selectedPet === pet ? "selected" : ""}
-              onClick={() => handlePetChange(pet)}
-            >
-              <input
-                type="radio"
-                name="pet"
-                value={pet}
-                checked={selectedPet === pet}
-                onChange={() => handlePetChange(pet)}
-              />
-              {pet}
-            </label>
-          ))}
-        </div>
-        <div className="nav-right">
-          <div className="search-bar">
-            <span className="search-icon">
-              <FontAwesomeIcon icon={faSearch} />
-            </span>
-            <input type="text" placeholder="Search something here!" />
-          </div>
-          <a href="#" className="join-button">
-            Join the community
-          </a>
-          <FontAwesomeIcon icon={faCircleDot} style={{ color: "#d92020" }} />
-          <select
-            className="currency-dropdown"
-            value={selectedCurrency}
-            onChange={(e) => setSelectedCurrency(e.target.value)}
-          >
-            <option value="INR">INR</option>
-            <option value="USD">$</option>
-            <option value="EUR">€</option>
-            <option value="Other">Others</option>
-          </select>
-        </div>
-      </nav>
+      <Navbar></Navbar>
       <div className="sign-up-form">
         <div className="header-section">
           <h1 className="form-header">Sign Up</h1>

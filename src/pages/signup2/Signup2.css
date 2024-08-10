@@ -1,24 +1,23 @@
 
 
 .SignUpBanner{
-  padding: 0px; 
-  margin-right: 5px;
-  height: 620px;
-  width: 100%;
-  border-radius: 25px 25px 25px 25px;
-
-  background-image:url(../../assets/signupBanner.png);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-image: url('../../assets/signupBanner.png');
   background-size: cover;
-  background-repeat: no-repeat; 
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
 }
 
 
 
 .signup-box{
   position: absolute;
-  width: 39%;
-  height: 499px;
-  margin-top: 9%;
-  margin-left: 5%;
-  border-radius: 50px;
+  width: 39vw;
+  height: 60vh;
+  margin-top: 6rem;
+  margin-left: 6rem;
+  border-radius: 200px;
 }

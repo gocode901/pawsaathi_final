@@ -2,7 +2,10 @@ const Location = () => {
   return (
     <div className=" flex flex-col items-left justify-center">
       <div>
-        <p className="mb-4 text-lg font-bold ml-2">
+        <p
+          className="mb-4 text-lg ml-2"
+          style={{ fontFamily: "Fredoka, sans-serif", fontWeight: 500 }}
+        >
           Enter Your Address & Location
         </p>
       </div>
